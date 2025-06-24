@@ -1,0 +1,210 @@
+/* AdminDashboard.css - Custom styles for dark theme admin dashboard */
+
+.admin-dashboard {
+  background: #111;
+  color: #f8f9fa;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.admin-topbar {
+  background: #181818;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #222;
+}
+
+.admin-app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.admin-app-title .brand-red {
+  color: #e50914;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+
+.admin-tabs .active {
+  border-bottom: 3px solid #e50914;
+  color: #e50914;
+  font-weight: bold;
+}
+
+.admin-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.switch-user-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.switch-user-btn:hover {
+  background: #b0060f;
+}
+
+.movie-table {
+  background: #181818;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.movie-table th, .movie-table td {
+  background: #181818;
+  color: #fff;
+  border: none;
+}
+
+.movie-table th {
+  font-weight: 700;
+  border-bottom: 2px solid #222;
+}
+
+.movie-table td {
+  padding: 1rem;
+}
+
+.movie-table td .text-muted {
+  color: #aaa !important;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.add-movie-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: background 0.2s;
+}
+.add-movie-btn:hover {
+  background: #b0060f;
+}
+
+.delete-icon {
+  color: #e50914;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+.delete-icon:hover {
+  color: #fff;
+}
+
+.edit-icon {
+  color: #ffd700;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+  margin-right: 1rem;
+}
+.edit-icon:hover {
+  color: #fff;
+}
+
+.review-card {
+  background: #181818;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  position: relative;
+}
+
+.review-card .delete-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.review-stars {
+  color: #ffd700;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+.review-author {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.review-date {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+}
+
+/* Scoped modal and form styles for Admin Dashboard only */
+.admin-dashboard .modal-content {
+  background: #181818;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.admin-dashboard .form-control, 
+.admin-dashboard .form-select, 
+.admin-dashboard textarea {
+  background: #222;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.admin-dashboard .form-control:focus, 
+.admin-dashboard .form-select:focus, 
+.admin-dashboard textarea:focus {
+  background: #222;
+  color: #fff;
+  border: 1.5px solid #e50914;
+  box-shadow: none;
+}
+
+.admin-dashboard ::-webkit-scrollbar {
+  width: 8px;
+  background: #181818;
+}
+.admin-dashboard ::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .admin-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .admin-tabs {
+    gap: 1rem;
+  }
+  .movie-table th, .movie-table td {
+    font-size: 0.95rem;
+  }
+  .review-card {
+    padding: 1rem;
+  }
+} 

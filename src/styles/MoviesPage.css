@@ -1,0 +1,128 @@
+/* src/styles/MoviesPage.css */
+
+.movies-page-container {
+  background-color: #111; /* Deep dark background */
+  color: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e50914; /* Your brand red */
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Featured Carousel Section */
+.featured-carousel-section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto; /* Center and add more bottom margin */
+}
+
+.carousel-item-content {
+  height: 500px; /* Fixed height for consistent carousel items */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  display: flex; /* Use flexbox for content alignment */
+  align-items: center; /* Vertically center content */
+  justify-content: flex-start; /* Align content to the left */
+  padding: 0 5%; /* Padding on the sides */
+  position: relative; /* For overlay */
+  border-radius: 15px; /* Rounded corners for the carousel items */
+  overflow: hidden;
+}
+
+.carousel-item-content .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%); /* Gradient overlay */
+  z-index: 1;
+}
+
+.carousel-caption-custom {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  text-align: left;
+  z-index: 2; /* Bring caption to front */
+  max-width: 50%; /* Limit width of caption text */
+  padding: 40px; /* Add padding inside caption */
+}
+
+.carousel-caption-custom h3 {
+  font-size: 3.5rem; /* Larger title */
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.carousel-caption-custom p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.carousel-caption-custom .btn {
+  background-color: #e50914; /* Red button */
+  border-color: #e50914;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Pill shape */
+  transition: all 0.3s ease;
+}
+
+.carousel-caption-custom .btn:hover {
+  background-color: #b0060f;
+  border-color: #b0060f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
+}
+
+/* Movie Card Grid */
+.new-releases-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-card-grid {
+  background-color: #1a1a1a; /* Darker than page background */
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.movie-card-grid:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card-grid img {
+  width: 100%;
+  height: 300px; /* Fixed height for images in the grid */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-bottom: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+.movie-card-grid h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.movie-card-grid p {
+  font-size: 0.9rem;
+  color: #ccc;
+} 

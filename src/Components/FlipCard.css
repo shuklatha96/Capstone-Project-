@@ -1,0 +1,98 @@
+/* src/Components/FlipCard.css */
+.flip-card-container {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  perspective: 1000px; /* For 3D effect */
+  cursor: pointer;
+  margin-bottom: 20px; /* Space between cards */
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s; /* Flip animation speed */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back of the card during flip */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #f8f9fa;
+}
+
+.flip-card-front {
+  background-color: #1c1c1c;
+}
+
+.flip-card-back {
+  background-color: #2a2a2a; /* Slightly different dark shade for back */
+  transform: rotateY(180deg);
+  text-align: center;
+  justify-content: flex-start; /* Align content to top */
+  padding-top: 20px;
+}
+
+.flip-card-image {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: 8px; /* Slightly less rounded corners for image */
+  margin-bottom: 10px;
+}
+
+.flip-card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.flip-card-back-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e50914; /* Red color for title on back */
+  margin-bottom: 10px;
+}
+
+.flip-card-rating .rating-display {
+  font-size: 1rem;
+}
+
+.flip-card-text {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.flip-card-description {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit description to 3 lines */
+  -webkit-box-orient: vertical;
+  color: #f8f9fa;
+}
+
+.flip-card-back .btn {
+  margin-top: auto; /* Push button to the bottom */
+}

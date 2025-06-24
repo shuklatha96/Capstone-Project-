@@ -1,0 +1,206 @@
+/* src/UserComponents/UserDashboard.css */
+
+.user-dashboard-container {
+  background-color: #1a1a1a; /* Dark background */
+  color: white;
+  padding: 20px;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for dark theme */
+}
+
+.user-dashboard-header {
+  border-bottom: 2px solid #e50914; /* Red accent for the border */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: white; /* Ensure header text is white */
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+}
+
+.user-dashboard-header h2 {
+  margin-bottom: 0; /* Remove default margin to prevent extra space */
+  font-size: 2.2rem; /* Make the title larger */
+  font-weight: bold; /* Make it bold */
+  color: #e50914; /* Apply the brand red color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+}
+
+.user-movie-card {
+  background-color: #2a2a2a; /* Darker card background */
+  border: 1px solid #3a3a3a; /* Subtle border */
+  border-radius: 10px; /* Rounded corners for cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.user-movie-card .card-body {
+  padding: 15px;
+}
+
+.user-movie-card .card-title {
+  color: white; /* White title */
+  font-weight: bold;
+}
+
+.user-movie-card .card-subtitle {
+  color: white; /* Changed to white for better visibility */
+  font-weight: normal; /* Ensure normal font weight */
+}
+
+.user-movie-card .card-text {
+  color: #ccc; /* Lighter text color */
+}
+
+.user-rating-section {
+  background-color: #38734a; /* A darker, richer green */
+  color: white; /* White text for contrast */
+  padding: 10px;
+  border-radius: 8px; /* Slightly more rounded */
+  margin-top: 10px;
+  border: 1px solid #4a8c60; /* Matching border */
+}
+
+.user-write-review-btn {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: white;
+  border: none;
+  padding: 8px 18px; /* Adjust padding for desired width and height */
+  font-size: 0.95rem; /* Slightly larger font */
+  border-radius: 8px; /* Rounded corners for button */
+  transition: background-color 0.2s ease-in-out;
+  width: auto; /* Allow width to adjust to content */
+  display: inline-block; /* Make it inline-block to prevent full width */
+  margin-top: 10px; /* Add some space above the button */
+}
+
+.user-write-review-btn:hover {
+  background-color: #0b5ed7; /* Darker blue on hover */
+}
+
+/* Main Dashboard Content Header */
+.main-dashboard-content-header {
+  text-align: center;
+  margin-bottom: 50px; /* More space below the header */
+}
+
+.dashboard-section-title {
+  font-size: 2.8rem; /* Even larger title */
+  font-weight: 800; /* Extra bold */
+  color: #e50914; /* Brand red */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Stronger text shadow */
+  letter-spacing: 1.5px; /* Add some letter spacing */
+  margin-bottom: 10px;
+}
+
+.dashboard-intro-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+/* User Profile Section Styles */
+.user-profile-section {
+  background-color: #222; /* Slightly lighter dark background for this section */
+  padding: 30px; /* Ample padding */
+  border-radius: 15px; /* More rounded corners */
+  margin-bottom: 40px; /* Space below the profile section */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+  position: relative;
+  overflow: hidden; /* Hide anything overflowing, like background elements */
+}
+
+.user-profile-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(229, 9, 20, 0.1); /* Subtle red glow */
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.user-profile-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(229, 9, 20, 0.1); /* Subtle red glow */
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.user-avatar {
+  border: 4px solid #e50914; /* Red border around avatar */
+  border-radius: 50%;
+  width: 120px; /* Larger avatar */
+  height: 120px;
+  min-width: 120px; /* Ensure it doesn't shrink */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Bring to front of pseudo-elements */
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  z-index: 1; /* Bring to front */
+}
+
+.welcome-message {
+  font-size: 2.5rem; /* Larger welcome message */
+  font-weight: 700;
+  color: #e50914; /* Red color for welcome */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 8px; /* Space below message */
+}
+
+.user-preferences {
+  font-size: 1.1rem;
+  color: #bbb; /* Lighter grey for text */
+}
+
+.genre-value {
+  font-weight: 600;
+  color: #fff; /* White for the genre value */
+}
+
+.edit-preferences-btn, .change-avatar-btn {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #e50914; /* Red border */
+  color: #e50914; /* Red text */
+  padding: 8px 20px;
+  border-radius: 25px; /* Pill-shaped buttons */
+  font-weight: 600;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.edit-preferences-btn:hover, .change-avatar-btn:hover {
+  background-color: #e50914; /* Red background on hover */
+  color: #fff; /* White text on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4); /* Red glow shadow */
+}
+
+.change-avatar-btn {
+  margin-left: 0; /* Align with avatar section if needed */
+  display: block; /* Make it a block element */
+  margin-top: 20px !important; /* Adjust spacing */
+  width: fit-content; /* Fit to content width */
+}
+
+/* Adjust header alignment to accommodate new profile section */
+.user-dashboard-header h2, .user-dashboard-header p {
+  margin-left: 0 !important; /* Reset margin */
+  text-align: left;
+} 

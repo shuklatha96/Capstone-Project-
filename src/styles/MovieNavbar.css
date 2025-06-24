@@ -1,0 +1,104 @@
+.custom-navbar {
+    background-color: #000; /* Black background */
+    padding: 15px 25px;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3); /* red glow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .brand-name {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  .brand-red {
+    color: red;
+  }
+  
+  .brand-black {
+    color: white;
+  }
+  
+  .nav-links .nav-link,
+  #login-dropdown {
+    color: white !important;
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links .nav-link:hover,
+  #login-dropdown:hover {
+    color: red !important;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 5px; /* Added gap to create separation */
+  }
+  
+  #navbar-search-input {
+    border-radius: 20px 0 0 20px; /* Rounded on left only for input */
+    padding: 0.375rem 0.75rem; /* Equivalent to 6px 12px for better consistency */
+    width: 170px !important; /* Adjusted width for compact look */
+    background-color: white; /* White background */
+    border: 1px solid #ced4da; /* Subtle border for definition */
+    color: #333; /* Dark text */
+    margin-right: 0; /* Ensure no margin, remove !important */
+    flex-grow: 0; /* Ensure it does not grow */
+    flex-shrink: 0; /* Ensure it does not shrink */
+    box-sizing: border-box; /* Include padding and border in width */
+    outline: none; /* Remove focus outline */
+  }
+  
+  #navbar-search-button {
+    border-radius: 0 20px 20px 0; /* Rounded on right only for button */
+    padding: 0.375rem 1.25rem; /* Equivalent to 6px 20px */
+    font-weight: bold;
+    background-color: red;
+    border: none; /* No border to prevent gap */
+    color: white;
+    margin-left: -1px; /* Precise overlap to close gap, remove !important */
+    flex-grow: 0; /* Prevent button from growing */
+    flex-shrink: 0; /* Prevent button from shrinking */
+    white-space: nowrap; /* Prevent text wrap */
+    box-sizing: border-box; /* Include padding and border in width */
+    outline: none; /* Remove focus outline */
+  }
+
+  #navbar-search-button:hover {
+    background-color: #f40612;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .search-bar {
+      flex-direction: column; /* Stack input and button vertically */
+      width: 100%;
+    }
+    #navbar-search-input {
+      width: 100% !important; /* Full width on smaller screens */
+      border-radius: 20px; /* Keep it rounded */
+      margin-bottom: 10px; /* Space below input */
+    }
+    #navbar-search-button {
+      width: 100%; /* Full width button */
+      border-radius: 20px; /* Keep it rounded */
+      margin-left: 0 !important; /* Remove overlap when stacked */
+    }
+  }
+
+  .custom-toggler {
+    background-color: red;
+    border: none;
+  }
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  

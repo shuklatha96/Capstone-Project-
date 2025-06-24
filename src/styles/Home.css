@@ -1,0 +1,298 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure it's above the video but below the content */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin-top: 0;
+  background-color: transparent; /* Remove background from content itself */
+  border-radius: 0; /* Remove border-radius */
+}
+
+.movie-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.movie-meta {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.movie-rating {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.rating-star {
+  color: gold;
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+.movie-bio {
+  margin-top: 1rem;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+
+.watch-now-btn,
+.more-info-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.watch-now-btn:hover,
+.more-info-btn:hover {
+  background-color: #f40612;
+}
+
+/* Movie section */
+.movie-section {
+  background-color: #111;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.movie-section h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Cards styling */
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover; /* Changed from contain to cover for a fuller look */
+  border-bottom: 1px solid #333; /* Darker border */
+  padding-bottom: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.movie-card-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 15px 15px 10px; /* Adjusted margins */
+  text-align: center;
+}
+
+.movie-rating .star {
+  font-size: 1.5rem; /* Consistent star size in movie cards */
+}
+
+.rating-value {
+  font-size: 1rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .movie-title {
+    font-size: 2.5rem;
+  }
+
+  .movie-meta {
+    font-size: 1rem;
+  }
+
+  .movie-bio {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .watch-now-btn,
+  .more-info-btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Scrolling Title Animation */
+.scrolling-title {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.8) 90%, rgba(0,0,0,0) 100%);
+}
+
+.scrolling-title h2 {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-text 20s linear infinite;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.red-word {
+  color: #e50914;
+  margin-right: 10px;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.scrolling-title:hover h2 {
+  animation-play-state: paused;
+}
+
+/* Watchlist Button */
+.watchlist-btn {
+background-color: #007bff; /* Vibrant blue */
+color: white;
+border: none;
+padding: 10px 20px;
+margin: 0 10px;
+font-size: 1rem;
+border-radius: 5px;
+transition: background 0.3s ease;
+}
+
+.watchlist-btn:hover {
+background-color: #0056b3; /* Deep hover blue */
+}
+
+/* Movie Details Button */
+.movie-details-btn {
+  background-color: white; /* White background */
+  color: #1a1a1a; /* Dark text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease; /* Add color to transition */
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.movie-details-btn:hover {
+  background-color: #f0f0f0; /* Slightly darker white on hover */
+  color: #1a1a1a; /* Keep text dark on hover */
+}
+
+.review-toggle-header {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.review-toggle-header:hover {
+  background-color: #2c2c2c;
+}
+
+.review-form-panel {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,148 @@
+/* src/styles/ModalStyles.css */
+
+/* General Modal Styling for Dark Theme */
+.custom-modal-dialog .modal-content {
+  background-color: #1a1a1a; /* Dark background matching the dashboard */
+  color: #f8f9fa; /* Light text for contrast */
+  border: 1px solid #333; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+.custom-modal-dialog .modal-header {
+  border-bottom: 1px solid #333;
+  background-color: #222; /* Slightly lighter dark header */
+  color: #e50914; /* Red title */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-modal-dialog .modal-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e50914; /* Ensure title is red */
+}
+
+.custom-modal-dialog .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%); /* Make close button white */
+}
+
+.custom-modal-dialog .modal-body {
+  background-color: #1a1a1a; /* Match content background */
+  padding: 25px;
+}
+
+.custom-modal-dialog .modal-body label {
+  color: #ccc; /* Lighter label text */
+  margin-bottom: 8px;
+}
+
+.custom-modal-dialog .custom-form-select, 
+.custom-modal-dialog .custom-form-input {
+  background-color: #2a2a2a; /* Dark input background */
+  color: #f8f9fa; /* Light text */
+  border: 1px solid #444; /* Darker border */
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-appearance: none; /* Remove default arrow on select */
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f8f9fa'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 1em;
+}
+
+.custom-modal-dialog .custom-form-select:focus, 
+.custom-modal-dialog .custom-form-input:focus {
+  border-color: #e50914; /* Red focus border */
+  box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25); /* Subtle red glow on focus */
+  background-color: #2a2a2a; /* Keep background dark on focus */
+  color: #f8f9fa;
+}
+
+.custom-modal-dialog .modal-footer {
+  border-top: 1px solid #333;
+  background-color: #222; /* Slightly lighter dark footer */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.custom-modal-dialog .btn-secondary {
+  background-color: #444; /* Darker grey for secondary button */
+  border-color: #444;
+  color: #f8f9fa;
+}
+
+.custom-modal-dialog .btn-secondary:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+.custom-modal-dialog .btn-danger {
+  background-color: #e50914; /* Brand red for primary action */
+  border-color: #e50914;
+  color: #fff;
+}
+
+.custom-modal-dialog .btn-danger:hover {
+  background-color: #b0060f;
+  border-color: #b0060f;
+}
+
+/* Review Modal Specific Styles (using generic modal classes) */
+.review-display-panel {
+  background-color: #2a2a2a; /* Darker background for the review list */
+  border-color: #444 !important; /* Consistent border color */
+  color: #f8f9fa; /* Light text for readability */
+}
+
+.review-item {
+  border-bottom: 1px solid #333 !important; /* Subtle separator */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.review-item:last-child {
+  border-bottom: none !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.review-item strong, .review-item p {
+  color: #f8f9fa !important; /* Ensure text is visible and white */
+}
+
+.review-item small {
+  color: #bbb !important; /* Lighter grey for date */
+}
+
+.submit-review-panel {
+  background-color: #2a2a2a; /* Dark background for the submission panel */
+  border: 1px solid #444; /* Consistent border */
+  color: #f8f9fa; /* Light text */
+}
+
+.review-form-panel label, .review-form-panel p {
+  color: #f8f9fa !important; /* Ensure labels and text are white */
+}
+
+.text-warning {
+  color: #ffc107 !important; /* Keep warning text yellow for contrast */
+}
+
+.movie-details-section p {
+  color: #f8f9fa; /* Ensure all paragraphs in details section are visible */
+}
+
+.movie-cast-info {
+  color: #f8f9fa; /* Make the cast information clearly visible */
+  font-weight: 500; /* Make it slightly bolder */
+}
+
+.modal.show.d-block {
+  z-index: 9999; /* Ensure the modal is always on top */
+} 
